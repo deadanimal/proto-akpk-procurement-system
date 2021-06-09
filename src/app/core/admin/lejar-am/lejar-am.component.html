@@ -1,0 +1,405 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Lejar Am
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)"> <i class="fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Kod Lejar</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Entiti</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 15467-40985"
+                />
+              </div>
+              <div class="form-group">
+                <label>Jenis Peruntukan</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Biji pelitup muka 1000 kotak"
+                />
+              </div>
+              <div class="form-group">
+                <label>Tahun Peruntukan</label>
+                <input
+                  type="number"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 2020"
+                />
+              </div>
+              <div class="form-group">
+                <label>Unit Pemesan (Unit)</label>
+                <input
+                  type="number"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 100"
+                />
+              </div>
+              <div class="form-group">
+                <label>Lokasi / negeri / zon</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Jalan kajang/semenyih / selangor / hulu langat"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nama Projek</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: kitar semula pelitup muka"
+                />
+              </div>
+              <div class="form-group">
+                <label>Sub Projek</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: pelitup muka berualiti tinggi"
+                />
+              </div>
+              <div class="form-group">
+                <label>Carta Akaun</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" lang="en" />
+                  <label class="custom-file-label">Pilih fail</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Lain-lain</label>
+                <textarea
+                  rows="4"
+                  class="form-control"
+                  placeholder="Sekiranya ada, sila nyatakan"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">
+              Hantar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Tukaran Mata Wang</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Jumlah Wang</label>
+                <input
+                  type="number"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 10.00"
+                />
+              </div>
+              <div class="form-group">
+                <label>Daripada</label>
+                <select class="form-control form-control-sm">
+                  <option *ngFor="let matawang of matawangs">{{
+                    matawang
+                  }}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Kepada</label>
+                <select class="form-control form-control-sm">
+                  <option *ngFor="let matawang of matawangs">{{
+                    matawang
+                  }}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Hasil Tukaran</label>
+                <input type="number" class="form-control form-control-sm" />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">
+              Tukar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Nilai Mata Wang Asing & Tempatan</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Jurnal</h3>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Jenis Jurnal</th>
+
+                  <th scope="col">Nama Laporan</th>
+
+                  <th scope="col">Tarikh</th>
+
+                  <th scope="col">Nama Pegawai</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Jurnal Am</td>
+                  <td>Analisis Kewangan Syarikat A</td>
+                  <td>10/03/2020</td>
+                  <td>Abu</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(jurnal)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Arkib"
+                      (click)="archive()"
+                    >
+                      <i class="fas fa-archive"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Jurnal Reversal</td>
+                  <td>Rekod Pembayaran Syarikat B</td>
+                  <td>07/03/2020</td>
+                  <td>Umar</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(jurnal)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Arkib"
+                      (click)="archive()"
+                    >
+                      <i class="fas fa-archive"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Jurnal Recurring</td>
+                  <td>Jumlah Perolehan Syarikat C</td>
+                  <td>03/03/2020</td>
+                  <td>Uthman</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(jurnal)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Arkib"
+                      (click)="archive()"
+                    >
+                      <i class="fas fa-archive"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Jurnal Proportional</td>
+                  <td>Peruntukan Kewangan Syarikat D</td>
+                  <td>01/03/2020</td>
+                  <td>Ali</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(jurnal)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Arkib"
+                      (click)="archive()"
+                    >
+                      <i class="fas fa-archive"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Jurnal Modal -->
+<ng-template #jurnal let-c="close" let-d="dismiss">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-default">
+          <div class="text-mutet mb-3">
+            <h2 class="mb-0 text-white float-left">
+              Jurnal
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Jenis Jurnal</label>
+                <input type="text" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>Nama Laporan</label>
+                <input type="text" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>Tarikh</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-calendar-alt"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    bsDatepicker
+                    [bsConfig]="{
+                      isAnimated: true,
+                      containerClass: 'theme-green'
+                    }"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nama Pegawai</label>
+                <input type="text" class="form-control form-control-sm" />
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-3">
+            <button class="btn btn-success btn-sm" (click)="kemaskini()">
+              Kemaskini
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

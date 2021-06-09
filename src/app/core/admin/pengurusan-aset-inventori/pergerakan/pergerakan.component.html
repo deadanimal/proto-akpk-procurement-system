@@ -1,0 +1,206 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Pergerakan
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)"> <i class="fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Rekod</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Aset</th>
+
+                  <th scope="col">ID</th>
+
+                  <th scope="col">Lokasi Asal</th>
+
+                  <th scope="col">Lokasi Sementara</th>
+
+                  <th scope="col">Tarikh</th>
+
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Blood gas analyzers</td>
+                  <td>PT-5764</td>
+                  <td>Petaling Jaya</td>
+                  <td>Gombak</td>
+                  <td>31/01/2020</td>
+                  <td><span class="badge badge-warning">Dalam Proses</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Urinalysis analyzers</td>
+                  <td>PT-7465</td>
+                  <td>Semenyih</td>
+                  <td>Beranang</td>
+                  <td>31/01/2020</td>
+                  <td><span class="badge badge-warning">Dalam Proses</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Kerusi Roda</td>
+                  <td>PT-4756</td>
+                  <td>Gombak</td>
+                  <td>Selayang</td>
+                  <td>29/02/2020</td>
+                  <td><span class="badge badge-success">Selesai</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Mesin Ventilasi</td>
+                  <td>PT-4365</td>
+                  <td>Rawang</td>
+                  <td>Slim River</td>
+                  <td>30/03/2020</td>
+                  <td><span class="badge badge-success">Selesai</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Kemaskini Modal -->
+<ng-template #kemaskini let-c="close" let-d="dismiss">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-default">
+          <div class="text-mutet mb-3">
+            <h2 class="mb-0 text-white float-left">
+              Kemaskini Maklumat
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Nama Aset</label>
+            <input type="text" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>ID</label>
+            <input type="text" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Lokasi Asal</label>
+            <input type="text" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Lokasi Sementara</label>
+            <input type="text" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select class="form-control form-control-sm">
+              <option>Baru</option>
+              <option>Dalam Proses</option>
+              <option>Selesai</option>
+            </select>
+          </div>
+          <div class="text-center pt-3">
+            <button class="btn btn-success btn-sm" (click)="kemaskini()">
+              Kemaskini
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

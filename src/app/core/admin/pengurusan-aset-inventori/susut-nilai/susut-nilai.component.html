@@ -1,0 +1,178 @@
+<div class="header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">
+            Susut Nilai
+          </h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class="row">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Kadar Pengiraan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Jenis Aset (Tanah)</label>
+                <textarea
+                  rows="4"
+                  class="form-control form-control-sm"
+                  placeholder="Tanah Pegangan Bebas / Tanah Pegangan Pajakan"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label>Jenis Aset (Bangunan)</label>
+                <textarea
+                  rows="4"
+                  class="form-control form-control-sm"
+                  placeholder="Tanah Pegangan Bebas / Tanah Pegangan Pajakan / Tanah Milik Orang Lain"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="alert alert-default" role="alert">
+                <h2 class="text-white">Cara Pengiraan</h2>
+                <ol>
+                  <li>Tanah Pegangan Bebas tidak disusut nilaikan</li>
+                  <li>
+                    Tanah Pegangan Pajakan disusut nilaikan mengikut tempoh
+                    pajakan
+                  </li>
+                  <li>
+                    Bangunan atas Tanah Pegangan Bebas disusut nilaikan pada
+                    kadar 2% (setahun) dalam tempoh 50 tahun
+                  </li>
+                  <li>Bangunan atas Tanah Pegangan Pajakan</li>
+                  <ol>
+                    <li>
+                      >50 tahun = disusut nilaikan pada kadar 2% (setahun)
+                    </li>
+                    <li>
+                      ,50 tahun = disusut nilaikan mengikut baki jangka masa
+                      pajakan
+                    </li>
+                  </ol>
+                  <li>
+                    5) Bangunan atas Tanah Milik Orang Lain disusut nilaikan
+                    selama 10 tahun
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Pengiraan Susut Nilai</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Jenis Aset (Tanah)</label><br/>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="tanah1"
+                    name="tanah1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="tanah1"
+                    >Pegangan Bebas</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="tanah2"
+                    name="tanah1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="tanah2"
+                    >Pegangan Pajakan</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Jenis Aset (Bangunan)</label><br/>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="bangunan1"
+                    name="bangunan1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="bangunan1"
+                    >Pegangan Bebas</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="bangunan2"
+                    name="bangunan1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="bangunan2"
+                    >Pegangan Pajakan</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="bangunan3"
+                    name="bangunan1"
+                    class="custom-control-input"
+                  />
+                  <label class="custom-control-label" for="bangunan3"
+                    >Milik Orang Lain</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Tempoh Tahunan</label>
+                <input
+                  type="number"
+                  class="form-control form-control-sm"
+                  placeholder="10"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Kira</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

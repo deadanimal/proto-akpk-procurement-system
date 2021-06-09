@@ -1,0 +1,595 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Akaun Belum Bayar
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)"> <i class="fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Maklumat Syarikat</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nama Syarikat</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Pihak Berkuasa Peranti Perubatan"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nombor Pendaftaran Syarikat</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 123684579986"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nombor Pendaftaran SST</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 189573557"
+                />
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="notelCheckbox"
+                      />
+                      <label class="custom-control-label" for="notelCheckbox"
+                        >No Telefon</label
+                      >
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="contoh: 09-1234567"
+                    />
+                  </div>
+                  <div class="col-4">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="nofaxCheckbox"
+                      />
+                      <label class="custom-control-label" for="nofaxCheckbox"
+                        >No Faks</label
+                      >
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="contoh: 09-2345678"
+                    />
+                  </div>
+                  <div class="col-4">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="emelCheckbox"
+                      />
+                      <label class="custom-control-label" for="emelCheckbox"
+                        >Emel</label
+                      >
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="contoh: ali@lpb.com.my"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-6">
+                    <label>Nama Pegawai 1</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="contoh: Umar"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label>Nama Pegawai 2</label>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="contoh: Uthman"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nama Bank</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Malayan Banking Berhad"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nombor Akaun Bank</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 1267535675683"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nama Pembekal Utama</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Rubber Plantation Sdn Bhd"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nombor PO Syarikat</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 75970648564"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Portal Pembayaran</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Muat Naik Pembayaran</label>
+                <div
+                  class="dropzone dropzone-single"
+                  data-toggle="dropzone"
+                  data-dropzone-url="http://"
+                >
+                  <div class="fallback">
+                    <div class="custom-file">
+                      <input
+                        type="file"
+                        class="custom-file-input"
+                        id="dropzoneBasicUpload"
+                      />
+                      <label class="custom-file-label" for="dropzoneBasicUpload"
+                        >Choose file</label
+                      >
+                    </div>
+                  </div>
+                  <div class="dz-preview dz-preview-single">
+                    <div class="dz-preview-cover">
+                      <img
+                        class="dz-preview-img"
+                        src="..."
+                        alt="..."
+                        data-dz-thumbnail=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Semakan Pembayaran</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-10">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Masukkan nombor id pembayaran anda"
+                />
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="text-center">
+                <button class="btn btn-success btn-sm">Hantar</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <textarea
+                rows="9"
+                class="form-control form-control-sm"
+                placeholder="Hasil carian akan dipaparkan di ruangan ini"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Aliran Tunai</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Borang</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>No Inbois</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 284783658"
+                />
+              </div>
+              <div class="form-group">
+                <label>Tarikh Inbois</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-calendar-alt"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    bsDatepicker
+                    [bsConfig]="{
+                      isAnimated: true,
+                      containerClass: 'theme-green'
+                    }"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Tarikh Penerimaan Inbois</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-calendar-alt"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    bsDatepicker
+                    [bsConfig]="{
+                      isAnimated: true,
+                      containerClass: 'theme-green'
+                    }"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>No PO</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 189573557"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nilai Inbois</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: RM 1,928,000"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nilai dilulus untuk dibayar</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: RM 509,000"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Kod Akaun</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 198556"
+                />
+              </div>
+              <div class="form-group">
+                <label>Kod Projek</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 1267535675683"
+                />
+              </div>
+              <div class="form-group">
+                <label>Jenis Peruntukan</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Dana Perolehan"
+                />
+              </div>
+              <div class="form-group">
+                <label>Kod Pembekal/No Gaji</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 76453"
+                />
+              </div>
+              <div class="form-group">
+                <label>Item Pembelian</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 100 Kotak Pelitup Muka"
+                />
+              </div>
+              <div class="form-group">
+                <label>Lain-lain</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Jika ada, sila nyatakan"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Akaun Belum Bayar</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Bank</th>
+
+                  <th scope="col">Nama Syarikat</th>
+
+                  <th scope="col">No Akaun</th>
+
+                  <th scope="col">No Pendaftaran lpb</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Maybank Islamic Berhad</td>
+                  <td>Pihak Berkuasa Peranti Perubatan</td>
+                  <td>125867455860</td>
+                  <td>46584627</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Buat Bayaran"
+                      (click)="payment()"
+                    >
+                      <i class="fas fa-file-invoice"></i>
+                    </button>
+                    <button
+                      class="btn btn-info btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Bayaran"
+                      (click)="approve()"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak Resit"
+                    >
+                      <i class="fas fa-receipt"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>CIMB Islamic Berhad</td>
+                  <td>Abu Garcia Plantation Sdn Bhd</td>
+                  <td>79435850846</td>
+                  <td>468573634</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Buat Bayaran"
+                      (click)="payment()"
+                    >
+                      <i class="fas fa-file-invoice"></i>
+                    </button>
+                    <button
+                      class="btn btn-info btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Bayaran"
+                      (click)="approve()"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak Resit"
+                    >
+                      <i class="fas fa-receipt"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>RHB Islamic Berhad</td>
+                  <td>Petani Moden Sdn Bhd</td>
+                  <td>8674656974537</td>
+                  <td>153756836</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Buat Bayaran"
+                      (click)="payment()"
+                    >
+                      <i class="fas fa-file-invoice"></i>
+                    </button>
+                    <button
+                      class="btn btn-info btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Bayaran"
+                      (click)="approve()"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak Resit"
+                    >
+                      <i class="fas fa-receipt"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Bank Islam Berhad</td>
+                  <td>Ah Ching Sdn Bhd</td>
+                  <td>684658693214</td>
+                  <td>12246473</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Buat Bayaran"
+                      (click)="payment()"
+                    >
+                      <i class="fas fa-file-invoice"></i>
+                    </button>
+                    <button
+                      class="btn btn-info btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Bayaran"
+                      (click)="approve()"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak Resit"
+                    >
+                      <i class="fas fa-receipt"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

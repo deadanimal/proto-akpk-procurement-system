@@ -1,0 +1,289 @@
+<div class="header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">
+            Penyelenggaraan
+          </h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Aduan Kerosakan Peralatan</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>No Siri Peralatan</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: PT-5764"
+            />
+          </div>
+          <div class="form-group">
+            <label>Nama Pelapor</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: Abu Bakar"
+            />
+          </div>
+          <div class="form-group">
+            <label>Jenis Kerosakan</label>
+            <select class="form-control form-control-sm">
+              <option>Kehilangan</option>
+              <option>Kecurian</option>
+              <option>Kecuaian</option>
+              <option>Bencana Alam</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tarikh Pelaporan</label>
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-calendar-alt"></i
+                ></span>
+              </div>
+              <input
+                type="text"
+                placeholder="Sila pilih tarikh"
+                class="form-control form-control-sm"
+                bsDatepicker
+                [bsConfig]="{ isAnimated: true, containerClass: 'theme-green' }"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Statitik Hapuskira</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Penyelenggaraan Pembaikan</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Nama Penyelenggara</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: Saiful"
+            />
+          </div>
+          <div class="form-group">
+            <label>No Siri Peralatan</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: PT-5764"
+            />
+          </div>
+          <div class="form-group">
+            <label>Jenis Pembaikan</label>
+            <select class="form-control form-control-sm">
+              <option>Penggantian</option>
+              <option>Baik Pulih</option>
+              <option>Beli Baharu</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tarikh Pembaikan</label>
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-calendar-alt"></i
+                ></span>
+              </div>
+              <input
+                type="text"
+                placeholder="Sila pilih tarikh"
+                class="form-control form-control-sm"
+                bsDatepicker
+                [bsConfig]="{ isAnimated: true, containerClass: 'theme-green' }"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Statitik Hapuskira</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Aset Penyelenggaraan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Aset</th>
+
+                  <th scope="col">No Siri Peralatan</th>
+
+                  <th scope="col">Jenis Kerosakan</th>
+
+                  <th scope="col">Tarikh Pelaporan</th>
+
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class=" list">
+                <tr>
+                  <td>1</td>
+                  <td>Blood gas analyzers</td>
+                  <td>PT-5764</td>
+                  <td>Kerosakan</td>
+                  <td>31/01/2020</td>
+                  <td><span class="badge badge-warning">Dalam Proses</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Tukar Status Selesai"
+                    >
+                      Selesai
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Urinalysis analyzers</td>
+                  <td>PT-7465</td>
+                  <td>Kehilangan</td>
+                  <td>31/01/2020</td>
+                  <td><span class="badge badge-success">Selesai</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      disabled
+                      placement="top"
+                      ngbTooltip="Tukar Status Selesai"
+                    >
+                      Selesai
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Kerusi Roda</td>
+                  <td>PT-4756</td>
+                  <td>Kerosakan</td>
+                  <td>29/02/2020</td>
+                  <td><span class="badge badge-success">Selesai</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      disabled
+                      placement="top"
+                      ngbTooltip="Tukar Status Selesai"
+                    >
+                      Selesai
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Mesin Ventilasi</td>
+                  <td>PT-4365</td>
+                  <td>Alat sudah usang</td>
+                  <td>30/03/2020</td>
+                  <td><span class="badge badge-success">Selesai</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      disabled
+                      placement="top"
+                      ngbTooltip="Tukar Status Selesai"
+                    >
+                      Selesai
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

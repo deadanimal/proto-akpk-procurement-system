@@ -1,0 +1,497 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Pentadbir Sistem - Administrator
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)"> <i class="fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <!-- <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Aduan Kerosakan Peralatan</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>No Siri Peralatan</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: PT-5764"
+            />
+          </div>
+          <div class="form-group">
+            <label>Nama Pelapor</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: Abu Bakar"
+            />
+          </div>
+          <div class="form-group">
+            <label>Jenis Kerosakan</label>
+            <select class="form-control form-control-sm">
+              <option>Kehilangan</option>
+              <option>Kecurian</option>
+              <option>Kecuaian</option>
+              <option>Bencana Alam</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tarikh Pelaporan</label>
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-calendar-alt"></i
+                ></span>
+              </div>
+              <input
+                type="text"
+                placeholder="Sila pilih tarikh"
+                class="form-control form-control-sm"
+                bsDatepicker
+                [bsConfig]="{ isAnimated: true, containerClass: 'theme-green' }"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Statitik Hapuskira</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Penyelenggaraan Pembaikan</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Nama Penyelenggara</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: Saiful"
+            />
+          </div>
+          <div class="form-group">
+            <label>No Siri Peralatan</label>
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="contoh: PT-5764"
+            />
+          </div>
+          <div class="form-group">
+            <label>Jenis Pembaikan</label>
+            <select class="form-control form-control-sm">
+              <option>Penggantian</option>
+              <option>Baik Pulih</option>
+              <option>Beli Baharu</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tarikh Pembaikan</label>
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-calendar-alt"></i
+                ></span>
+              </div>
+              <input
+                type="text"
+                placeholder="Sila pilih tarikh"
+                class="form-control form-control-sm"
+                bsDatepicker
+                [bsConfig]="{ isAnimated: true, containerClass: 'theme-green' }"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Statitik Hapuskira</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Rekod Pengguna</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Pengguna</th>
+
+                  <th scope="col">ID Pengguna</th>
+
+                  <th scope="col">Emel</th>
+
+                  <th scope="col">Nombor Telefon</th>
+
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Abu Bakar</td>
+                  <td>#13</td>
+                  <td>abubakar@lpb.com.my</td>
+                  <td>011-5647876</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Umar</td>
+                  <td>#15</td>
+                  <td>umar@lpb.com.my</td>
+                  <td>013-87659876</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Uthman</td>
+                  <td>#17</td>
+                  <td>uthman@lpb.com.my</td>
+                  <td>017-64875645</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Ali</td>
+                  <td>#19</td>
+                  <td>ali@lpb.com.my</td>
+                  <td>019-6546586</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Organisasi</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Organisasi</th>
+
+                  <th scope="col">ID Organisasi</th>
+
+                  <th scope="col">Emel</th>
+
+                  <th scope="col">Cawangan</th>
+
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Medical Devive Authority</td>
+                  <td>@13</td>
+                  <td>mda@gov.my</td>
+                  <td>Putrajaya</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskiniorg)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Kementerian Kesihatan Malaysia</td>
+                  <td>@15</td>
+                  <td>kkm@gov.my</td>
+                  <td>Putrajaya</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskiniorg)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>FAMA</td>
+                  <td>@17</td>
+                  <td>fama@gov.my</td>
+                  <td>Gombak</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskiniorg)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Jabatan Perhutanan Negara</td>
+                  <td>@19</td>
+                  <td>hutan@gov.my</td>
+                  <td>Kuala Lumpur</td>
+                  <td><span class="badge badge-success">Aktif</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskiniorg)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Kemaskini Modal -->
+<ng-template #kemaskini let-c="close" let-d="dismiss">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-default">
+          <div class="text-mutet mb-3">
+            <h2 class="mb-0 text-white float-left">
+              Kemaskini Maklumat Pengguna
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Nama Pengguna</label>
+            <input type="text" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Emel</label>
+            <input type="email" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Nombor Telefon</label>
+            <input type="tel" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select class="form-control form-control-sm">
+              <option>Aktif</option>
+              <option>Tidak Aktif</option>
+            </select>
+          </div>
+          <div class="text-center pt-3">
+            <button class="btn btn-success btn-sm" (click)="kemaskini()">
+              Kemaskini
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #kemaskiniorg let-c="close" let-d="dismiss">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-default">
+          <div class="text-mutet mb-3">
+            <h2 class="mb-0 text-white float-left">
+              Kemaskini Maklumat Pengguna
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label>Nama Organisasi</label>
+            <input type="text" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Emel</label>
+            <input type="email" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Cawangan</label>
+            <input type="tel" class="form-control form-control-sm" />
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select class="form-control form-control-sm">
+              <option>Aktif</option>
+              <option>Tidak Aktif</option>
+            </select>
+          </div>
+          <div class="text-center pt-3">
+            <button class="btn btn-success btn-sm" (click)="kemaskini()">
+              Kemaskini
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

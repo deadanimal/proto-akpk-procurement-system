@@ -1,0 +1,308 @@
+<div class="header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">
+            Pelupusan
+          </h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Permohonan Pelupusan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Jenis Pelupusan</label>
+                <select class="form-control form-control-sm">
+                  <option>Harta Modal</option>
+                  <option>Aset Tak Alih</option>
+                  <option>Tanah</option>
+                  <option>Komponen Aset Tak Alih</option>
+                  <option>Inventori</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tarikh Pelupusan</label>
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fas fa-calendar-alt"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Sila pilih tarikh"
+                    class="form-control form-control-sm"
+                    bsDatepicker
+                    [bsConfig]="{
+                      isAnimated: true,
+                      containerClass: 'theme-green'
+                    }"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Dokumen Bagi Pelupusan</label>
+                <div
+                  class="dropzone dropzone-single"
+                  data-toggle="dropzone"
+                  data-dropzone-url="http://"
+                >
+                  <div class="fallback">
+                    <div class="custom-file">
+                      <input
+                        type="file"
+                        class="custom-file-input"
+                        id="dropzoneBasicUpload"
+                      />
+                      <label class="custom-file-label" for="dropzoneBasicUpload"
+                        >Choose file</label
+                      >
+                    </div>
+                  </div>
+                  <div class="dz-preview dz-preview-single">
+                    <div class="dz-preview-cover">
+                      <img
+                        class="dz-preview-img"
+                        src="..."
+                        alt="..."
+                        data-dz-thumbnail=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-8">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="mb-0">Statitik Hapuskira</h3>
+          </div>
+          <div class="card-body">
+            <div id="chartdivone" style="width: 100%; height: 400px"></div>
+          </div>
+        </div>
+      </div> -->
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Pelupusan Barangan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Jenis Pelupusan</th>
+
+                  <th scope="col">Nama Dokumen</th>
+
+                  <th scope="col">ID</th>
+
+                  <th scope="col">Nama Pegawai</th>
+
+                  <th scope="col">Pengesahan / Kelulusan</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class=" list">
+                <tr>
+                  <td>1</td>
+                  <td>Harta Modal</td>
+                  <td>Dokumen Pembaikan Peralatan</td>
+                  <td>D-756</td>
+                  <td>Abu Bakar</td>
+                  <td><span class="badge badge-success">Disahkan</span> / <span class="badge badge-warning">Dalam Proses</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Batalkan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    |
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Tukar Status"
+                      (click)="changeStatus()"
+                    >
+                      <i class="fas fa-question-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Aset Tak Alih</td>
+                  <td>Dokumen Tanah Rizab Melayu</td>
+                  <td>D-333</td>
+                  <td>Umar</td>
+                  <td><span class="badge badge-success">Disahkan</span> / <span class="badge badge-warning">Dalam Proses</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Batalkan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    |
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Tukar Status"
+                      (click)="changeStatus()"
+                    >
+                      <i class="fas fa-question-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Tanah</td>
+                  <td>Tanah Milik Kerajaan </td>
+                  <td>D-486</td>
+                  <td>Uthman</td>
+                  <td><span class="badge badge-success">Disahkan</span> / <span class="badge badge-danger">Gagal</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Batalkan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    |
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Tukar Status"
+                      (click)="changeStatus()"
+                    >
+                      <i class="fas fa-question-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Komponen Aset Tak Alih</td>
+                  <td>Dokumen Jentera Pertanian</td>
+                  <td>D-935</td>
+                  <td>Ali</td>
+                  <td><span class="badge badge-success">Disahkan</span> / <span class="badge badge-success">Lulus</span></td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Luluskan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Batalkan Pengesahan"
+                    >
+                      <i class="fas fa-file-signature"></i>
+                    </button>
+                    |
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Tukar Status"
+                      (click)="changeStatus()"
+                    >
+                      <i class="fas fa-question-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,327 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Buku Tunai
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)"> <i class="fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Maklumat Bank</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nama Bank</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Maybank Islamic Berhad"
+                />
+              </div>
+              <div class="form-group">
+                <label>Alamat Bank</label>
+                <textarea
+                  rows="4"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 1st Floor, Menara Maybank, 100, Jalan Tun Perak, 50050 Kuala Lumpur"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label>Cawangan Bank</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Kuala Lumpur"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>No Akaun</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 128856389605645"
+                />
+              </div>
+              <div class="form-group">
+                <label>Swift Code</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 12675356"
+                />
+              </div>
+              <div class="form-group">
+                <label>No Iban</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 8673558673"
+                />
+              </div>
+              <div class="form-group">
+                <label>No Pendaftaran LPB</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 7597064"
+                />
+              </div>
+              <div class="form-group">
+                <label>No Rentas Bank Negara</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 24654475"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Penyata Bank</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Nama Bank</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Maybank Islamic Berhad"
+                />
+              </div>
+              <div class="form-group">
+                <label>Muat Naik Penyata</label>
+                <div
+                  class="dropzone dropzone-single"
+                  data-toggle="dropzone"
+                  data-dropzone-url="http://"
+                >
+                  <div class="fallback">
+                    <div class="custom-file">
+                      <input
+                        type="file"
+                        class="custom-file-input"
+                        id="dropzoneBasicUpload"
+                      />
+                      <label class="custom-file-label" for="dropzoneBasicUpload"
+                        >Choose file</label
+                      >
+                    </div>
+                  </div>
+                  <div class="dz-preview dz-preview-single">
+                    <div class="dz-preview-cover">
+                      <img
+                        class="dz-preview-img"
+                        src="..."
+                        alt="..."
+                        data-dz-thumbnail=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Format Fail</label>
+                <select class="form-control form-control-sm">
+                  <option>Sila Pilih</option>
+                  <option *ngFor="let filetype of filetypes">{{
+                    filetype
+                  }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Aliran Tunai</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Laporan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Bank</th>
+
+                  <th scope="col">No Akaun</th>
+
+                  <th scope="col">No Pendaftaran LPB</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Maybank Islamic Berhad</td>
+                  <td>125867455860</td>
+                  <td>46584627</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>CIMB Islamic Berhad</td>
+                  <td>79435850846</td>
+                  <td>468573634</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>RHB Islamic Berhad</td>
+                  <td>8674656974537</td>
+                  <td>153756836</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Bank Islam Berhad</td>
+                  <td>684658693214</td>
+                  <td>12246473</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

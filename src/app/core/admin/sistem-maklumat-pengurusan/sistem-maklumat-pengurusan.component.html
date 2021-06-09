@@ -1,0 +1,525 @@
+<div class="header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">
+            Sistem Maklumat Pengurusan
+          </h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Penyata Kewangan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Jenis Penyata</th>
+
+                  <th scope="col">ID</th>
+
+                  <th scope="col">Tarikh</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class=" list">
+                <tr>
+                  <td>1</td>
+                  <td>Kedudukan Kewangan</td>
+                  <td>12345</td>
+                  <td>31/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Prestasi Perbelanjaan</td>
+                  <td>64875</td>
+                  <td>31/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Perubahan Ekuiti</td>
+                  <td>35498</td>
+                  <td>29/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Aliran Tunai</td>
+                  <td>73546</td>
+                  <td>30/03/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Laporan Kewangan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Jenis Penyata</th>
+
+                  <th scope="col">ID</th>
+
+                  <th scope="col">Tarikh</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class=" list">
+                <tr>
+                  <td>1</td>
+                  <td>Prestasi Perbelanjaan Mengurus (JPKA)</td>
+                  <td>435</td>
+                  <td>25/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Prestasi Perbelanjaan PembangunanRMK (JTPA)</td>
+                  <td>873</td>
+                  <td>19/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Prestasi Perbelanjaan Projek</td>
+                  <td>548</td>
+                  <td>14/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Kedudukan Rizab Tunai</td>
+                  <td>014</td>
+                  <td>12/03/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Laporan Operasi Kewangan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Jenis Penyata</th>
+
+                  <th scope="col">ID</th>
+
+                  <th scope="col">Tarikh</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class=" list">
+                <tr>
+                  <td>1</td>
+                  <td>Pembayaran Pembekal</td>
+                  <td>0465</td>
+                  <td>25/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Pengumuran (Ageing)</td>
+                  <td>0835</td>
+                  <td>19/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Tunggakan Hutang</td>
+                  <td>0375</td>
+                  <td>14/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Wang Tidak Dituntut</td>
+                  <td>0158</td>
+                  <td>12/03/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Lihat"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,294 @@
+<div class="header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">
+            Carian
+          </h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <!-- <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Jumlah Syarikat Yang Sudah/Belum Membayar SST</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Carian Data</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <label>Nama Data</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Prestasi Kewangan"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label>ID</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: %3425"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label>Jenis Data</label>
+                <select class="form-control form-control-sm">
+                  <option>Sila pilih</option>
+                  <option>Harta Modal</option>
+                  <option>Inventori</option>
+                  <option>Aset Tak Alih</option>
+                  <option>Komponen</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Carian</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Data</h3>
+        </div>
+        <div class="card-body">
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush">
+              <thead class=" thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Data</th>
+
+                  <th scope="col">Jenis Data</th>
+
+                  <th scope="col">ID</th>
+
+                  <th scope="col">Tarikh</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class=" list">
+                <tr>
+                  <td>1</td>
+                  <td>Inventori Masuk / Keluar</td>
+                  <td>Inventori</td>
+                  <td>%48576</td>
+                  <td>29/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Buang"
+                    >
+                      <i class="fas fa-trash"></i>
+                    </button>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Keluasan Tanah Rizab</td>
+                  <td>Aset Tak Alih</td>
+                  <td>%76859</td>
+                  <td>20/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Buang"
+                    >
+                      <i class="fas fa-trash"></i>
+                    </button>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Komponen Jentera Pertanian</td>
+                  <td>Komponen</td>
+                  <td>%84657</td>
+                  <td>14/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Buang"
+                    >
+                      <i class="fas fa-trash"></i>
+                    </button>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Pelaburang Asing</td>
+                  <td>Pelaburan</td>
+                  <td>%74367</td>
+                  <td>02/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Buang"
+                    >
+                      <i class="fas fa-trash"></i>
+                    </button>
+                    <button
+                      class="btn btn-default btn-sm"
+                      placement="top"
+                      ngbTooltip="Cetak"
+                    >
+                      <i class="fas fa-print"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- kemaskini Modal -->
+<ng-template #kemaskini let-c="close" let-d="dismiss">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-default">
+          <div class="text-mutet mb-3">
+            <h2 class=" mb-0 text-white float-left">
+              Kemaskini Maklumat
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label>Nama Data</label>
+                <input type="text" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>Jenis Data</label>
+                <select class="form-control form-control-sm">
+                  <option>Sila pilih</option>
+                  <option>Harta Modal</option>
+                  <option>Inventori</option>
+                  <option>Dana</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-3">
+            <button class="btn btn-success btn-sm">
+              Kemaskini
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,600 @@
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-dark d-inline-block mb-0">
+            Akaun Belum Terima
+          </h6>
+
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item">
+                <a href="javascript:void(0)"> <i class="fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="col-lg-6 col-5 text-right">
+          <!-- {{ momentdate }} -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <div class="card card-stats">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">
+                    Pelanggan Berdaftar
+                  </h5>
+
+                  <span class="h2 font-weight-bold mb-0"> 490 </span>
+                </div>
+
+                <div class="col-auto">
+                  <div
+                    class="icon icon-shape bg-gradient-red text-white rounded-circle shadow"
+                  >
+                    <i class="fas fa-users"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 0.47%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+          <div class="card card-stats">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">
+                    Jualan Tahunan
+                  </h5>
+
+                  <span class="h2 font-weight-bold mb-0"> RM 550K </span>
+                </div>
+
+                <div class="col-auto">
+                  <div
+                    class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow"
+                  >
+                    <i class="fas fa-money-bill-alt"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 9.8%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+          <div class="card card-stats">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">
+                    Pendapatan Tahunan
+                  </h5>
+
+                  <span class="h2 font-weight-bold mb-0"> RM 888K </span>
+                </div>
+
+                <div class="col-auto">
+                  <div
+                    class="icon icon-shape bg-gradient-green text-white rounded-circle shadow"
+                  >
+                    <i class="fas fa-money-bill-alt"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 4.48%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Senarai Maklumat Pelanggan</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Nama Pelanggan</th>
+
+                  <th scope="col">ID Pelanggan</th>
+
+                  <th scope="col">Emel</th>
+
+                  <th scope="col">No Telefon</th>
+
+                  <th scope="col">Status</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Abu</td>
+                  <td>13</td>
+                  <td>abu@gmail.com</td>
+                  <td>012-4759687</td>
+                  <td>
+                    <span class="badge badge-success badge-sm">Aktif</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Umar</td>
+                  <td>15</td>
+                  <td>umar@gmail.com</td>
+                  <td>013-7653498</td>
+                  <td>
+                    <span class="badge badge-success badge-sm">Aktif</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Uthman</td>
+                  <td>17</td>
+                  <td>uthman@gmail.com</td>
+                  <td>012-6482111</td>
+                  <td>
+                    <span class="badge badge-success badge-sm">Aktif</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Ali</td>
+                  <td>18</td>
+                  <td>ali@gmail.com</td>
+                  <td>017-6438702</td>
+                  <td>
+                    <span class="badge badge-success badge-sm">Aktif</span>
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Kemaskini"
+                      (click)="openModal(kemaskini)"
+                    >
+                      <i class="fas fa-edit"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Terimaan Bayaran</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nama Pengguna</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: Umar"
+                />
+              </div>
+              <div class="form-group">
+                <label>Bayaran melalui</label><br />
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="bayaranmelalui1"
+                    class="custom-control-input"
+                    name="bayaranmelalui"
+                  />
+                  <label class="custom-control-label" for="bayaranmelalui1"
+                    ><img
+                      src="../../../../assets/img/icons/cards/mastercard.png"
+                  /></label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="bayaranmelalui2"
+                    class="custom-control-input"
+                    name="bayaranmelalui"
+                  />
+                  <label class="custom-control-label" for="bayaranmelalui2"
+                    ><img src="../../../../assets/img/icons/cards/paypal.png"
+                  /></label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="bayaranmelalui3"
+                    class="custom-control-input"
+                    name="bayaranmelalui"
+                  />
+                  <label class="custom-control-label" for="bayaranmelalui3"
+                    ><img src="../../../../assets/img/icons/cards/visa.png"
+                  /></label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nama Bank</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 189573557"
+                />
+              </div>
+              <div class="form-group">
+                <label>Jumlah Bayaran (RM)</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 7,000"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Bayaran Secara</label><br />
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="carabayaran1"
+                    class="custom-control-input"
+                    name="carabayaran"
+                  />
+                  <label class="custom-control-label" for="carabayaran1"
+                    >Penuh</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="carabayaran2"
+                    class="custom-control-input"
+                    name="carabayaran"
+                  />
+                  <label class="custom-control-label" for="carabayaran2"
+                    >Ansuran</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Jenis Inbois</label><br />
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="jenisinbois1"
+                    class="custom-control-input"
+                    name="jenisinbois"
+                  />
+                  <label class="custom-control-label" for="jenisinbois1"
+                    >One-Time</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="jenisinbois2"
+                    class="custom-control-input"
+                    name="jenisinbois"
+                  />
+                  <label class="custom-control-label" for="jenisinbois2"
+                    >Recurring</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nombor Resit Bayaran</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: 1267535675683"
+                />
+              </div>
+              <div class="form-group">
+                <label>Emel</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  placeholder="contoh: ali@lpb.com.my"
+                />
+              </div>
+              <div class="form-group">
+                <label>Nota</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Jika ada, sila nyatakan"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-sm">Hantar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Laporan Pengumuran Hutang</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Sila lakukan carian di sini"
+                />
+              </div>
+            </div>
+            <div class="col-2 p-1">
+              <button class="btn btn-success btn-sm">Carian</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">No</th>
+
+                  <th scope="col">Tajuk Laporan</th>
+
+                  <th scope="col">Tempoh</th>
+
+                  <th scope="col">Tindakan</th>
+                </tr>
+              </thead>
+
+              <tbody class="list">
+                <tr>
+                  <td>1</td>
+                  <td>Laporan Pengumuran Hutang Dec 2019</td>
+                  <td>01/12/2019 - 31/12/2019</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Laporan Pengumuran Hutang Jan 2020</td>
+                  <td>01/01/2020 - 31/01/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Laporan Pengumuran Hutang Feb 2020</td>
+                  <td>01/02/2020 - 29/02/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Laporan Pengumuran Hutang Mac 2020</td>
+                  <td>01/03/2020 - 30/03/2020</td>
+                  <td>
+                    <button
+                      class="btn btn-success btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail Excel"
+                    >
+                      <i class="fas fa-file-excel"></i>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      placement="top"
+                      ngbTooltip="Fail PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Kemaskini Modal -->
+<ng-template #kemaskini let-c="close" let-d="dismiss">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-header bg-default">
+          <div class="text-mutet mb-3">
+            <h2 class="mb-0 text-white float-left">
+              Kemaskini Maklumat Pelanggan
+            </h2>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label>Nama Pelanggan</label>
+                <input type="text" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>ID Pelanggan</label>
+                <input type="text" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>Alamat Pelanggan</label>
+                <textarea
+                  rows="4"
+                  class="form-control form-control-sm"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Emel</label>
+                <input type="email" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>No Telefon</label>
+                <input type="tel" class="form-control form-control-sm" />
+              </div>
+              <div class="form-group">
+                <label>Status</label>
+                <select class="form-control form-control-sm">
+                  <option>Sila Pilih</option>
+                  <option>Aktif</option>
+                  <option>Tidak Aktif</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="text-center pt-3">
+            <button class="btn btn-success btn-sm" (click)="kemaskini()">
+              Kemaskini
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

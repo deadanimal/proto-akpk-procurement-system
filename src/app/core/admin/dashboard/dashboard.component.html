@@ -1,0 +1,271 @@
+<div class="header pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-6 col-7">
+          <h6 class=" h2 text-dark d-inline-block mb-0">Dashboard</h6>
+
+          <nav
+            aria-label="breadcrumb"
+            class=" d-none d-md-inline-block ml-md-4"
+          >
+            <ol class=" breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class=" breadcrumb-item">
+                <a href="javascript:void(0)"> <i class=" fas fa-home"> </i> </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class=" col-lg-6 col-5 text-right">
+          {{ momentdate }}
+        </div>
+      </div>
+
+      <div class=" row">
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Pengguna Berdaftar
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 216 </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-red text-white rounded-circle shadow"
+                  >
+                    <i class=" fas fa-users"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 0.47%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Jualan Tahunan
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> RM 700K </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-orange text-white rounded-circle shadow"
+                  >
+                    <i class=" fas fa-money-bill-alt"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 9.8%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Prestasi Tahunan
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 66% </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-green text-white rounded-circle shadow"
+                  >
+                    <i class=" fas fa-percentage"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 3.48%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-xl-3 col-md-6">
+          <div class=" card card-stats">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Transaksi Tahunan
+                  </h5>
+
+                  <span class=" h2 font-weight-bold mb-0"> 22,547 </span>
+                </div>
+
+                <div class=" col-auto">
+                  <div
+                    class=" icon icon-shape bg-gradient-info text-white rounded-circle shadow"
+                  >
+                    <i class=" fas fa-file-contract"> </i>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 mb-0 text-sm">
+                <span class="text-success mr-2"
+                  ><i class="fa fa-arrow-up"></i> 7.7%</span
+                >
+                <span class="text-nowrap">sejak bulan lepas</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Statistik Tahunan</h3>
+        </div>
+        <div class="card-body">
+          <div id="chartdivone" style="width: 100%; height: 400px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-xl-4">
+      <div class=" card">
+        <div class=" card-header"><h5 class=" h3 mb-0">To do list</h5></div>
+        <div class=" card-body p-0">
+          <ul class=" list-group list-group-flush" data-toggle="checklist">
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-success">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Luluskan permohonan A</h5>
+                  <small> 10:30 AM </small>
+                </div>
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-success"
+                  >
+                    <input
+                      checked="checked"
+                      class=" custom-control-input"
+                      id="chk-todo-task-1"
+                      type="checkbox"
+                    /><label
+                      class=" custom-control-label"
+                      for="chk-todo-task-1"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-warning">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Semak permohonan B</h5>
+                  <small> 10:30 AM </small>
+                </div>
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-warning"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-2"
+                      type="checkbox"
+                    /><label
+                      class=" custom-control-label"
+                      for="chk-todo-task-2"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-info">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Buat bayaran C</h5>
+                  <small> 10:30 AM </small>
+                </div>
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-info"
+                  >
+                    <input
+                      class=" custom-control-input"
+                      id="chk-todo-task-3"
+                      type="checkbox"
+                    /><label
+                      class=" custom-control-label"
+                      for="chk-todo-task-3"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class=" checklist-entry list-group-item flex-column align-items-start py-4 px-4"
+            >
+              <div class=" checklist-item checklist-item-danger">
+                <div class=" checklist-info">
+                  <h5 class=" checklist-title mb-0">Semak ledger D</h5>
+                  <small> 10:30 AM </small>
+                </div>
+                <div>
+                  <div
+                    class=" custom-control custom-checkbox custom-checkbox-danger"
+                  >
+                    <input
+                      checked="checked"
+                      class=" custom-control-input"
+                      id="chk-todo-task-4"
+                      type="checkbox"
+                    /><label
+                      class=" custom-control-label"
+                      for="chk-todo-task-4"
+                    ></label>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
